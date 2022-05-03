@@ -2,4 +2,11 @@ const authorizedEmails = ["samumadrigali@gmail.com", "nikmosca@gmail.com", "marc
 const userEmail = prompt("Digita la tua email:");
 const isAuthorized = authorizedEmails.some((mail) => mail === userEmail);
 
-alert(isAuthorized ? "Sei autorizzato ad accedere!" : "Non sei autorizzato ad accedere!");
+const title = document.querySelector(".title");
+if (isAuthorized) {
+  title.innerHTML = `Bentornato ${userEmail}!`;
+} else {
+  const card = document.querySelector(".card");
+  card.style.backgroundColor = "rgba(87, 46, 46, 0.65)";
+  title.innerHTML = `Accesso non autorizzato!`;
+}

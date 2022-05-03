@@ -1,6 +1,6 @@
 const authorizedEmails = ["samumadrigali@gmail.com", "nikmosca@gmail.com", "marcoacciarri@gmail.com"];
 const userEmail = prompt("Digita la tua email:");
-const isAuthorized = authorizedEmails.some((mail) => mail === userEmail);
+const isAuthorized = authorizedEmails.includes(userEmail);
 
 const title = document.querySelector(".title");
 if (isAuthorized) {
